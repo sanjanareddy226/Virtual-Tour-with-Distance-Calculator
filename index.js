@@ -20,7 +20,7 @@ export default class MainComponent extends React.Component {
       console.log(input);
       // this.setState({ currentloc: input });
       fetch(
-        "https://api.opencagedata.com/geocode/v1/json?key=1037f542c28b424aad38a3488bbe2573&q=kanjurmarg&pretty=1"
+        `https://api.opencagedata.com/geocode/v1/json?key=1037f542c28b424aad38a3488bbe2573&q=${input}&pretty=1`
       )
         .then((response) => response.json())
         .then((json) => {
