@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   asset,
   Image,
@@ -6,9 +6,9 @@ import {
   StyleSheet,
   VrButton,
   NativeModules,
-} from 'react-360';
+} from "react-360";
 
-import {changeLocation} from '../../components/Wrapper/Wrapper.component';
+import { changeLocation } from "../../components/Wrapper/Wrapper.component";
 
 const tooltipModule = NativeModules.TooltipModule;
 const transitionModule = NativeModules.TransitionModule;
@@ -20,14 +20,14 @@ export default class TransitionComponent extends React.Component {
     height: this.props.height ? this.props.height : 100,
   };
 
-  changeLocation (location) {
-    tooltipModule.setTooltips (this.props.name);
-    transitionModule.setTooltips (this.props.name);
-    changeLocation (location);
+  changeLocation(location) {
+    tooltipModule.setTooltips(this.props.name);
+    transitionModule.setTooltips(this.props.name);
+    changeLocation(location);
   }
 
-  render () {
-    const styleSheet = StyleSheet.create ({
+  render() {
+    const styleSheet = StyleSheet.create({
       viewPanel: {
         width: this.state.width,
         height: this.state.height,
@@ -36,9 +36,9 @@ export default class TransitionComponent extends React.Component {
 
     return (
       <View style={styleSheet.viewPanel}>
-        <VrButton onClick={() => this.changeLocation (this.props.goesTo)}>
+        <VrButton onClick={() => this.changeLocation(this.props.goesTo)}>
           <Image
-            source={asset (`${this.state.source}`)}
+            source={asset(`${this.state.source}`)}
             style={styleSheet.viewPanel}
           />
         </VrButton>
