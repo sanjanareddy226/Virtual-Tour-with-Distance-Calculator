@@ -1,0 +1,2 @@
+global.lat = "";
+global.long = "";

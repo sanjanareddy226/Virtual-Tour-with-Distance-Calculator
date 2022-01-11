@@ -5,6 +5,7 @@ import { Text } from "react-native";
 import { wrap } from "./components/Wrapper/Wrapper.component";
 import TooltipComponent from "./components/Tooltip/Tooltip.component";
 import TransitionComponent from "./components/Transition/Transition.component";
+import "./global.js";
 
 export default class MainComponent extends React.Component {
   // state = {
@@ -25,6 +26,10 @@ export default class MainComponent extends React.Component {
         .then((json) => {
           // this.setState({ apidata: json });
           console.log(json);
+          global.lat = json["results"][0]["geometry"]["lat"];
+          global.long = json["results"][0]["geometry"]["lng"];
+          console.log(global.lat);
+          console.log(global.long);
         })
         .catch((error) => console.error(error));
     });
