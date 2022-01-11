@@ -1,5 +1,6 @@
 import React from "react";
 import { asset, Image, View, StyleSheet, NativeModules, Text } from "react-360";
+import { getDistance, getPreciseDistance } from "geolib";
 
 const tooltipModule = NativeModules.TooltipModule;
 
@@ -47,7 +48,7 @@ export default class TooltipComponent extends React.Component {
         paddingRight: 5,
         backgroundColor: "#FFFFFF",
         width: 300,
-        maxHeight: 100,
+        maxHeight: 1000,
       },
       text: {
         fontSize: 24,
@@ -66,10 +67,28 @@ export default class TooltipComponent extends React.Component {
           source={asset(`${this.state.source}`)}
           style={styleSheet.viewPanel}
         />
+
         {this.state.isMouseOver ? (
           <View style={styleSheet.textBlock}>
             <Text style={styleSheet.text}>{this.props.text}</Text>
-            <Text style={styleSheet.text}>Distance</Text>
+            <Text style={styleSheet.text}>
+              Distance from entered location:{" "}
+              {String(
+                getPreciseDistance(
+                  { latitude: this.props.lat, longitude: this.props.long },
+                  { latitude: 51.528308, longitude: -0.3817765 }
+                )
+              )}
+            </Text>
+
+            {/* <Text style={styleSheet.text}>
+              {String(
+                getPreciseDistance(
+                  { latitude: this.props.lat, longitude: this.props.long },
+                  { latitude: 51.528308, longitude: -0.3817765 }
+                )
+              )}
+            </Text> */}
           </View>
         ) : null}
       </View>
