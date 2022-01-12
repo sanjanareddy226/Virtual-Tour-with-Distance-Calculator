@@ -15,7 +15,7 @@ export default class MainComponent extends React.Component {
   onClick() {
     // 4.) show the keyboard
     NativeModules.Keyboard.startInput({
-      placeholder: "Enter your name",
+      placeholder: "Enter a location",
     }).then((input) => {
       console.log(input);
       // this.setState({ currentloc: input });
