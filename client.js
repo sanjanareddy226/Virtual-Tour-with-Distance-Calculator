@@ -2,6 +2,8 @@ import { ReactInstance } from "react-360-web";
 import KeyboardModule from "react-360-keyboard/KeyboardModule";
 import { TooltipModule } from "./modules/Tooltip.module";
 import { TransitionModule } from "./modules/Transition.module";
+import DataModule from "./components/DataModule";
+import CustomLinkingModule from "./components/CustomLinkingModule";
 
 export let r360;
 
@@ -11,7 +13,9 @@ function init(bundle, parent, options = {}) {
     nativeModules: [
       new TooltipModule(),
       new TransitionModule(),
+      new CustomLinkingModule(),
       KeyboardModule.addModule,
+      (ctx) => new DataModule(ctx),
     ],
     ...options,
   });

@@ -1,0 +1,10 @@
+{
+  "backgroundImage": "static_assets/apollo.jpg",
+  "links": [
+    { "name": "Ukraine Tourism", "url": "https://traveltoukraine.org/" },
+    { "name": "Currency", "url": "https://www.xe.com/currencyconverter/convert/?Amount=1&From=UAH&To=INR" },
+    { "name": "Food", "url": "https://theculturetrip.com/europe/ukraine/articles/12-traditional-ukrainian-dishes-you-must-try/" },
+    { "name": "Transport", "url": "https://www.logisticsukraine.net/Transportation_Ukraine" }
+    
+  ]
+}
