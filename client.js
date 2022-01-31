@@ -2,8 +2,8 @@ import { ReactInstance } from "react-360-web";
 import KeyboardModule from "react-360-keyboard/KeyboardModule";
 import { TooltipModule } from "./modules/Tooltip.module";
 import { TransitionModule } from "./modules/Transition.module";
-import DataModule from "./components/DataModule";
-import CustomLinkingModule from "./components/CustomLinkingModule";
+import DataModule from "./modules/DataModule";
+import CustomLinkingModule from "./modules/CustomLinkingModule";
 
 export let r360;
 

@@ -1,6 +1,6 @@
-import locations from '../consts/locations';
+import locations from "../static_assets/locations";
 
-export function getListTooltips (location) {
+export function getListTooltips(location) {
   if (
     locations[`${location}`] &&
     locations[`${location}`].tooltips &&
@@ -12,7 +12,7 @@ export function getListTooltips (location) {
   return [];
 }
 
-export function getListTransitions (location) {
+export function getListTransitions(location) {
   if (
     locations[`${location}`] &&
     locations[`${location}`].transitions &&
