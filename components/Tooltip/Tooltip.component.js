@@ -82,15 +82,6 @@ export default class TooltipComponent extends React.Component {
               )}{" "}
               meters
             </Text>
-
-            {/* <Text style={styleSheet.text}>
-              {String(
-                getPreciseDistance(
-                  { latitude: this.props.lat, longitude: this.props.long },
-                  { latitude: 51.528308, longitude: -0.3817765 }
-                )
-              )}
-            </Text> */}
           </View>
         ) : null}
       </View>
